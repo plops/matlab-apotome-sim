@@ -146,11 +146,11 @@ end
 contrast=ill_sizes;
 for q=0:hei-1
     selection=norm_incohs(114:143,floor(s(1)/2),floor(nz/2),q);
-    contrast(q+1)=max(selection)-min(selection);
+    contrast(q+1)=max(selection)/min(selection);
 end
-plot(ill_sizes,contrast)
+semilogy(ill_sizes(2:end),contrast(2:end))
 xlabel('illumination aperture / bfp aperture')
-ylabel('contrast max-min of in-focus grating image')
+ylabel('contrast max/min of in-focus grating image')
 % print(gcf,'-depsc','/dev/shm/o.eps')
 print(gcf,'-dpng','~/1029/contrast.png')
 
