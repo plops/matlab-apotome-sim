@@ -10,6 +10,7 @@ apertureY=2*rbfp;
 cosTheta=newim(s)+1;                  
 kz_of_kxky=cosTheta;
 
+% FIXME wrong, should be ri/lambda
 klen=ri/NA; % radius of ewald sphere in units of the aperture
 
 kx=xx(s,'freq')*(apertureX);                   % normalized to ellipse
